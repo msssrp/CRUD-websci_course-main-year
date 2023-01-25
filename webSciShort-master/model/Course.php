@@ -22,7 +22,8 @@ class Course{
 
     public function getCourseYear($cs_year)
     {
-        $sql = "SELECT sci_cs.cs_id,sci_cs.cs_name,sci_cs.cs_img,sci_cs.cs_date,sci_cs.cs_wallet,sci_cs.cs_range_date,sci_cs.cs_fcourse,sci_cs.cs_time,sci_cs.cs_location,sci_cs.cs_group,sci_cs.cs_detail,sci_cs.cs_perform,sci_cs.cs_reward,sci_cs.cs_schedule,sci_cs.cs_phone,sci_cs.cs_year 
+        $sql = "SELECT sci_cs.cs_id,sci_cs.cs_name,sci_cs.cs_img,sci_cs.cs_date,sci_cs.cs_wallet,sci_cs.cs_range_date,sci_cs.cs_fcourse,
+        sci_cs.cs_time,sci_cs.cs_location,sci_cs.cs_group,sci_cs.cs_detail,sci_cs.cs_perform,sci_cs.cs_reward,sci_cs.cs_schedule,sci_cs.cs_phone,sci_cs.cs_year 
         FROM sci_cs INNER JOIN sci_years ON sci_cs.cs_year = sci_years.cs_year WHERE sci_cs.cs_year = ".$cs_year;
         $query = $this->ConDB->prepare($sql);
         if( $query->execute()){
