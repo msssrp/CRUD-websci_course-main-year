@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 19, 2023 at 02:25 PM
+-- Generation Time: Jan 26, 2023 at 12:03 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -71,6 +71,38 @@ INSERT INTO `sci_cs` (`cs_id`, `cs_name`, `cs_img`, `cs_date`, `cs_wallet`, `cs_
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `sci_regis_course`
+--
+
+CREATE TABLE `sci_regis_course` (
+  `cr_id` int(11) NOT NULL,
+  `cr_email` varchar(255) NOT NULL,
+  `cr_genders` varchar(50) NOT NULL,
+  `cr_name` varchar(255) NOT NULL,
+  `cr_numbers` varchar(10) NOT NULL,
+  `cr_card_id` varchar(20) NOT NULL,
+  `cr_certi` varchar(100) NOT NULL,
+  `cs_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Dumping data for table `sci_regis_course`
+--
+
+INSERT INTO `sci_regis_course` (`cr_id`, `cr_email`, `cr_genders`, `cr_name`, `cr_numbers`, `cr_card_id`, `cr_certi`, `cs_id`) VALUES
+(1, 'ScishortcoursesNPRU@gmail.com', 'นาย', 'Prayut JanOcha', 'asdsad', 'asdsadas', 'ปวช.', 4),
+(2, 'asdsadsa@awasd.com', 'นางสาว', 'asd', 'asdsad', 'asdsadas', 'มัธยมปลาย', 5),
+(3, 'asdsadsa@awasd.com', 'นางสาว', 'asd', 'asdsad', 'asdsadas', 'ปวส.', 5),
+(4, 'asdsadsa@awasd.com', 'นางสาว', 'asd', 'asdsad', 'asdsadas', 'ปวส.', 5),
+(5, 'asdsadsa@awasd.com', 'นางสาว', 'asd', 'asdsad', 'asdsadas', 'ปวส.', 0),
+(6, 'ScishortcoursesNPRU@gmail.com', 'นาย', 'sad', 'asdsad', 'sad', 'มัธยมปลาย', 2),
+(7, 'ScishortcoursesNPRU@gmail.com', 'นาย', 'sad', 'asd', 'sad', 'มัธยมปลาย', 3),
+(8, 'ScishortcoursesNPRU@gmail.com', 'นาย', 'sad', 'asd', 'sad', 'ปวช.', 3),
+(9, 'siripoomcontact@gmail.com', 'นาย', 'siripoom luengsaard', '0855429355', '1709700270132', 'ปริญญาตรี', 3);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `sci_years`
 --
 
@@ -98,6 +130,12 @@ ALTER TABLE `sci_cs`
   ADD PRIMARY KEY (`cs_id`);
 
 --
+-- Indexes for table `sci_regis_course`
+--
+ALTER TABLE `sci_regis_course`
+  ADD PRIMARY KEY (`cr_id`);
+
+--
 -- Indexes for table `sci_years`
 --
 ALTER TABLE `sci_years`
@@ -112,6 +150,12 @@ ALTER TABLE `sci_years`
 --
 ALTER TABLE `sci_cs`
   MODIFY `cs_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
+
+--
+-- AUTO_INCREMENT for table `sci_regis_course`
+--
+ALTER TABLE `sci_regis_course`
+  MODIFY `cr_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `sci_years`

@@ -11,5 +11,6 @@
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="../view/vendor/boostrap/css/styles.css" rel="stylesheet" />
     <link href="../view/vendor/boostrap/css/css.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
     <script src="https://kit.fontawesome.com/c150442d6f.js" crossorigin="anonymous"></script>
 </head>
